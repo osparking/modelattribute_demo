@@ -12,14 +12,14 @@ public class CalculatorAppIntilizer extends AbstractAnnotationConfigDispatcherSe
 
 	@Override
 	protected Class<?>[] getServletConfigClasses() {
-		// TODO Auto-generated method stub
-		return null;
+		Class aClass[] = { CalculatorAppConfig.class };
+		return aClass;
 	}
 
 	@Override
 	protected String[] getServletMappings() {
-		// TODO Auto-generated method stub
-		return null;
+		String arr[] = { "/modatt.space/*" };
+		return arr;
 	}
 
 }
