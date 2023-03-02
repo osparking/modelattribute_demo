@@ -17,7 +17,7 @@ public class AppController {
 		return "welcome-page";
 	}
 
-	@RequestMapping("/home")
+	@RequestMapping("/process-homepage")
 	public String showResultPage(NameInfoDTO nameInfoDTO, Model model) {
 		// URL 에서 읽은 값들을 모델에 성질 값으로 저장하라
 		model.addAttribute("nameInfo", nameInfoDTO);
