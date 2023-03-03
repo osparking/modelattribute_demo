@@ -9,7 +9,7 @@
 </head>
 <body>
 	<hr />
-	<form:form action="process-homepage" method="post"
+	<form:form action="process-homepage" method="get"
 		modelAttribute="nameInfo">
 		<div align="center">
 			<p>
