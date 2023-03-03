@@ -1,5 +1,8 @@
 package modelattribute_demo.config;
 
+import javax.servlet.Filter;
+
+import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class CalculatorAppIntilizer extends AbstractAnnotationConfigDispatcherServletInitializer {
@@ -21,5 +24,13 @@ public class CalculatorAppIntilizer extends AbstractAnnotationConfigDispatcherSe
 		String arr[] = { "/modatt.space/*" };
 		return arr;
 	}
+	
+	 @Override
+   protected Filter[] getServletFilters() {
+
+     CharacterEncodingFilter characterEncodingFilter = new CharacterEncodingFilter();
+     characterEncodingFilter.setEncoding("UTF-8");
+     return new Filter[] { characterEncodingFilter};
+   }
 
 }
